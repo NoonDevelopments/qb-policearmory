@@ -15,7 +15,7 @@ Config.Armories = {
             FreezeEntityPosition = true
         },
             ArmoryItems = {
-                ['police'] = {
+                ['police'] = { -- if you the same items to grade 0 and 1 it will show them double, so add whatever in the grade 0 if you want them in 1 as grade 1 will have grade 0 items.
                     [0] = {
                         {name = 'WEAPON_PISTOL', label = 'Pistol', price = 100},
                         {name = 'WEAPON_STUNGUN', label = 'Stun Gun', price = 50},
