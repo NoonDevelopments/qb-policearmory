@@ -14,7 +14,6 @@ Config.Armories = {
             SetBlockingOfNonTemporaryEvents = true,
             FreezeEntityPosition = true
         },
-        ArmoryItems = {
             ArmoryItems = {
                 ['police'] = {
                     [0] = {
@@ -23,12 +22,11 @@ Config.Armories = {
                         {name = 'ARMOR', label = 'Body Armor', price = 50}
                     },
                     [1] = {
-                        {name = 'WEAPON_PISTOL', label = 'Pistol', price = 100},
                         {name = 'WEAPON_SMG', label = 'SMG', price = 250},
-                        {name = 'ARMOR', label = 'Body Armor', price = 50}
+                        {name = 'WEAPON_ASSAULTRIFLE_MK2', label = 'Pew Pew', price = 250},
+                        {name = 'rifle_ammo', label = 'Ammo', price = 22},
                     }
                     -- Add more grades as needed
-                }
-        } }
+                } }
     } -- comma here if you add another (Do not add a comma after your new armory unless you have more)
 }
