@@ -50,14 +50,14 @@ function OpenArmory(armory)
     local job = playerData.job.name
     local grade = playerData.job.grade.level
 
-    print("Player job: " .. tostring(job))  -- Debug print
-    print("Player grade: " .. tostring(grade))  -- Debug print
+    --print("Player job: " .. tostring(job))  -- Debug print
+    --print("Player grade: " .. tostring(grade))  -- Debug print
 
     if armory.ArmoryItems and armory.ArmoryItems[job] then
         local items = {}
 
         for i = 0, grade do
-            print("Checking grade: " .. tostring(i))  -- Debug print
+            --print("Checking grade: " .. tostring(i))  -- Debug print
             if armory.ArmoryItems[job][i] then
                 for _, item in pairs(armory.ArmoryItems[job][i]) do
                     table.insert(items, item)
@@ -66,7 +66,7 @@ function OpenArmory(armory)
         end
 
         if next(items) then
-            print("Items found: " .. #items)  -- Debug print
+            --print("Items found: " .. #items)  -- Debug print
             SendNUIMessage({
                 action = 'open',
                 items = items
@@ -74,11 +74,11 @@ function OpenArmory(armory)
             SetNuiFocus(true, true)
             inArmory = true
         else
-            print("No items found for grades")  -- Debug print
+            --print("No items found for grades")  -- Debug print
             QBCore.Functions.Notify("You do not have access to the armory.", "error")
         end
     else
-        print("No armory items for job: " .. tostring(job))  -- Debug print
+        --print("No armory items for job: " .. tostring(job))  -- Debug print
         QBCore.Functions.Notify("You do not have access to the armory.", "error")
     end
 end
@@ -87,7 +87,7 @@ RegisterNUICallback('buyItem', function(data, cb)
     local item = data.item
     local price = data.price
 
-    print("Attempting to buy item: " .. tostring(item) .. " for price: " .. tostring(price))  -- Debug print
+    --print("Attempting to buy item: " .. tostring(item) .. " for price: " .. tostring(price))  -- Debug print
 
     -- Check if the player's inventory has space for the item
     QBCore.Functions.TriggerCallback('qb-policearmory:server:canCarryItem', function(canCarry)
