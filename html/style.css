@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+}
+
+#armory {
+    background-color: rgba(22, 22, 22, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    max-height: 90vh; /* Ensure the armory itself doesn't exceed viewport height */
+    overflow: hidden; /* Hide overflow from the armory div */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px; /* Space for scrollbar */
+}
+
+/* Custom scrollbar styles */
+.items-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.items-container::-webkit-scrollbar-track {
+    background: rgba(22, 22, 22, 0.95);
+    border-radius: 10px;
+}
+
+.items-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 69, 0, 0.6);
+    border-radius: 10px;
+    border: 2px solid rgba(22, 22, 22, 0.95);
+}
+
+.items-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 69, 0, 0.7);
+}
+
+.item {
+    background-color: rgba(36, 36, 36, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.item span {
+    display: block;
+    margin: 10px 0;
+}
+
+.cost-label {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(255, 69, 0, 0.8);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: rgba(255, 69, 0, 0.9);
+}
+
+.close-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgba(255, 69, 0, 0.8);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 69, 0, 0.9);
+}
